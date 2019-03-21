@@ -10,8 +10,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { CardsProvider } from '../providers/cards/cards';
 import { ConfigProvider } from '../providers/config/config';
+import { SlidePage } from '../pages/slide/slide';
+import { HttpModule} from '@angular/http';
+import { HeroService } from '../providers/hero-service/hero-service';
+import { HeroPageModule } from '../pages/hero/hero.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { ConfigProvider } from '../providers/config/config';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SlidePage,
+    HeroPageModule
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,14 +37,15 @@ import { ConfigProvider } from '../providers/config/config';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SlidePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CardsProvider,
-    ConfigProvider
+    ConfigProvider,
+    HeroService
   ]
 })
 export class AppModule {}
