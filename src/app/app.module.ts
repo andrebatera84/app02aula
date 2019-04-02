@@ -13,8 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
 import { SlidePage } from '../pages/slide/slide';
 import { HttpModule} from '@angular/http';
-import { HeroService } from '../providers/hero-service/hero-service';
-import { HeroPageModule } from '../pages/hero/hero.module';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { HeroPageModule } from '../pages/hero/hero.module';
     HomePage,
     TabsPage,
     SlidePage,
-    HeroPageModule
   ],
   imports: [
     BrowserModule,
@@ -45,7 +43,6 @@ import { HeroPageModule } from '../pages/hero/hero.module';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConfigProvider,
-    HeroService
   ]
 })
 export class AppModule {}
