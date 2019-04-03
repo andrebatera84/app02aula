@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
 import { SlidePage } from '../pages/slide/slide';
 import { HttpModule} from '@angular/http';
+import { DetalhesPage } from '../pages/detalhes/detalhes';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HttpModule} from '@angular/http';
     HomePage,
     TabsPage,
     SlidePage,
+    DetalhesPage
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { HttpModule} from '@angular/http';
     HomePage,
     TabsPage,
     SlidePage,
+    DetalhesPage
   ],
   providers: [
     StatusBar,

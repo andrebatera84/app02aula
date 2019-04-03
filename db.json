@@ -1,0 +1,16 @@
+{
+  "viagens": [
+    {
+      "id": 1,
+      "local": "Praça Mauá",
+      "data": "20/12/18",
+      "descricao": "Momento de lazer com meus pequenos",
+      "like": "20",
+      "comentario": "",
+      "foto": "",
+      "detalhes": "",
+      "nota": "10.0",
+      "aproveitamento": ""
+    }
+  ]
+}
